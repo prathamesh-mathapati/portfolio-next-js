@@ -1,0 +1,130 @@
+.mane-section{
+    display: flex;
+    margin: auto;
+    padding-top: 20px;
+    justify-content: space-between;
+   
+}
+.mane-section h1{
+    font-size: 60px;
+    font-weight: 200;
+    padding-top: 20%;
+}
+.mane-section .mane-section-frist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+
+}
+.mane-section h1 span{
+  font-weight: 600;
+}
+.mane-section h1 p {
+  font-family: 'Rampart One', sans-serif;
+}
+.mane-section .banner-img{
+    width: 500px;
+    height: auto;
+    border-bottom: 2px solid black;
+}
+.botton-icons {
+  justify-content: flex-start;
+  width: 100%;
+}
+.botton-icons a svg{
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: auto;
+
+}
+.botton-icons-dark{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.d-flex {
+  display: flex;
+  gap: 20px;
+}
+.botton-icons a svg:hover{
+  background-color: black;
+ color: white;
+}
+
+.main-skills-section h3{
+  padding-top: 30px;
+  font-size: 60px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.main-skills-section .main-skills-icons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10%;
+
+}
+.main-skills-section .main-skills-icons span{
+  font-size: 50px;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+
+}
+.main-skills-section .main-skills-icons span b{
+  font-size: 20px;
+  font-weight: 400;
+
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 519px) {
+   .mane-section{
+    flex-direction: column;
+   }
+   .mane-section h1{
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .mane-section .mane-section-frist{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .botton-icons {
+    justify-content: center;
+  }
+}
+
+  
+  @media only screen and (min-width: 520px) and (max-width: 768px) {
+    .mane-section{
+        flex-direction: column;
+       }
+       .mane-section h1{
+        font-size: 30px;
+      }
+      .mane-section .mane-section-frist{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .botton-icons {
+        justify-content: center;
+      }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+  }

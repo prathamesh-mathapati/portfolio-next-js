@@ -1,0 +1,128 @@
+.nav{
+  position: sticky;
+  top: 1px;
+}
+
+.nav-bar-main{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    font-weight: 600;
+}
+.flex {
+    display: flex;
+}
+.nav-bar-main .nav-sub-text{
+    gap: 20px;
+    position: relative;
+}
+
+.nav-bar-main .nav-bar-btn, .nav-bar-main .nav-bar-btn a{
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.nav-bar-main .nav-bar-btn a{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+.nav-bar-main .nav-bar-btn a:hover {
+    background-color: white;
+    color: black;
+   
+}
+
+
+
+.nav-sub-text p {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .nav-sub-text p::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width ease .3s;
+
+  }
+  
+  .nav-sub-text p:hover::after {
+    width: 100%;
+  }
+  .nav-link::after{
+    width: 100% !important;
+  } 
+.menu-icon{
+  font-size: 40px;
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+.d-none-pm{
+  display: none;
+}
+.d-block-pm{
+  display: block;
+}
+
+/* // for mobile devices */
+
+@media only screen and (min-width: 300px) and (max-width: 519px) {
+  .nav-bar-tag{
+    background: #6f6f6fe3;
+    color: white;
+    height: 100vh;
+  }
+  .nav-bar-main{
+    height: inherit;
+  }
+  .nav-sub-text{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .d-none-pm{
+    display: block;
+  }
+  .d-block-pm{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 768px) {
+  .nav-bar-tag{
+    background: #6f6f6fe3;
+    color: white;
+    height: 100vh;
+  }
+  .nav-bar-main{
+    height: inherit;
+  }
+  .nav-sub-text{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    justify-content: center;
+
+  }
+  .d-none-pm{
+    display: block;
+  }
+  .d-block-pm{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
