@@ -56,11 +56,13 @@
  color: white;
 }
 
+.main-skills-section{
+  padding-top: 50px;
+}
 .main-skills-section h3{
-  padding-top: 30px;
   font-size: 60px;
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .main-skills-section .main-skills-icons{
   display: grid;
@@ -77,15 +79,29 @@
   flex-direction: column;
   border-radius: 10px;
   padding: 10px;
+  cursor: pointer;
 
+}
+.main-skills-icons span:hover ,.main-skills-icons-link{
+  background-color: black;
+  color: white;
 }
 .main-skills-section .main-skills-icons span b{
   font-size: 20px;
   font-weight: 400;
 
-
 }
-
+  
+.main-express-section{
+  margin-top: 50px;
+  font-size: 60px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.experience-details-heading{
+  font-size: 18px;
+}
 @media only screen and (min-width: 300px) and (max-width: 519px) {
    .mane-section{
     flex-direction: column;

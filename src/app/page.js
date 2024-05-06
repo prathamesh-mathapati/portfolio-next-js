@@ -5,7 +5,7 @@ import NavaBar from "@/componest/NavaBar";
 export default function Home() {
   return (
     <>
-    <div className="w-pm-80">
+    <div >
    <NavaBar/>
    <ManeSection/>
    </div>

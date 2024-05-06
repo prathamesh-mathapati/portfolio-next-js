@@ -15,15 +15,16 @@ import { FaWebflow } from "react-icons/fa6";
 import { FaWordpress } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
-import { FaBootstrap ,FaHtml5} from "react-icons/fa";
+import { FaBootstrap ,FaHtml5} from "react-icons/fa"
+import navgurukul from "../assets/navgurukul_logo.jpg";
 
 
 const ManeSection = () => {
   return (
 
     <>
-    <section className='mane-section'>
-      <div className='mane-section-frist'>
+    <section className='mane-section w-pm-80'>
+      <div className='mane-section-frist '>
         <h1>Hello I'm <span>Prathamesh</span>  <br /> <span>Web</span> Developer <br /> Best for <span>India</span></h1>
         <div className='botton-icons d-flex'>
             <Link href="https://github.com/prathamesh-mathapati" target='_blank' className='botton-icons-dark'><FaGithub /></Link>
@@ -38,14 +39,14 @@ const ManeSection = () => {
 
     </section>
 
-      <section className='main-skills-section'>
-          <h3>My skills</h3>
+      <section className='main-skills-section w-pm-80'>
+          <h3>My <strong> Skills</strong></h3>
           <div className='main-skills-icons'>
           <span>
             <RiNextjsFill/>
             <b>Next js</b>
           </span>
-          <span>
+          <span className='main-skills-icons-link'>
             <FaReact/>
             <b>React js</b>
           </span>
@@ -83,7 +84,23 @@ const ManeSection = () => {
             </span>
 
           </div>
-    </section>
+      </section>
+
+      <section className='main-express-section'>
+        <div className='w-pm-80'>
+        <h3>My <strong>Experience</strong></h3>
+        <div className='experience-details'>
+          <div className='experience-details-heading'>
+            <div className='experience-sub-heading'>
+            <Image src={navgurukul} width={60} height={60}/>
+            <p>Learn web Development at Navgurukul</p> 
+            </div>
+            <p>Date </p>
+          </div>
+          <p></p>
+        </div>
+        </div>
+      </section>
     </>
   );
 }
