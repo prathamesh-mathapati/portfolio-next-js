@@ -93,11 +93,42 @@ const ManeSection = () => {
           <div className='experience-details-heading'>
             <div className='experience-sub-heading'>
             <Image src={navgurukul} width={60} height={60}/>
-            <p>Learn web Development at Navgurukul</p> 
+            <Link href="https://www.navgurukul.org/" target='_blnk'>Learn web Development at Navgurukul</Link> 
             </div>
             <p>Date </p>
           </div>
-          <p></p>
+          <p className='company-details'>have handled the post of mentor and teacher of 10+ students free of cost I am making some demo projects like an E-commerce website, clone of omani food ect.</p>
+        </div>
+
+        <div className='experience-details'>
+          <div className='experience-details-heading'>
+            <div className='experience-sub-heading'>
+            <Image src={navgurukul} width={60} height={60}/>
+            <Link href="https://www.navgurukul.org/" target='_blnk'>Learn web Development at Navgurukul</Link> 
+            </div>
+            <p>Date </p>
+          </div>
+          <p className='company-details'>have handled the post of mentor and teacher of 10+ students free of cost I am making some demo projects like an E-commerce website, clone of omani food ect.</p>
+        </div>
+        <div className='experience-details'>
+          <div className='experience-details-heading'>
+            <div className='experience-sub-heading'>
+            <Image src={navgurukul} width={60} height={60}/>
+            <Link href="https://www.navgurukul.org/" target='_blnk'>Learn web Development at Navgurukul</Link> 
+            </div>
+            <p>Date </p>
+          </div>
+          <p className='company-details'>have handled the post of mentor and teacher of 10+ students free of cost I am making some demo projects like an E-commerce website, clone of omani food ect.</p>
+        </div>
+        <div className='experience-details'>
+          <div className='experience-details-heading'>
+            <div className='experience-sub-heading'>
+            <Image src={navgurukul} width={60} height={60}/>
+            <Link href="https://www.navgurukul.org/" target='_blnk'>Learn web Development at Navgurukul</Link> 
+            </div>
+            <p>Date </p>
+          </div>
+          <p className='company-details'>have handled the post of mentor and teacher of 10+ students free of cost I am making some demo projects like an E-commerce website, clone of omani food ect.</p>
         </div>
         </div>
       </section>
