@@ -133,6 +133,36 @@
   background-color: #272727;
   border: 1px solid #272727;
 }
+.main-projects-section{
+  margin-top: 50px;
+  font-size: 60px;
+  text-align: center;
+}
+.main-projects-section .projects-left{
+  display: flex;
+  gap: 20px;
+  text-align: left;
+  
+}
+.main-projects-section .projects-left:nth-child(odd){
+flex-direction: row-reverse;
+
+}
+.main-projects-section .project-img{
+  width: 600px;
+  height: 300px;
+}
+.main-projects-section   h4{
+  font-size: 60px;
+  font-weight: 700;
+}
+.main-projects-section   p{
+  font-size: 60px;
+  font-weight: 700;
+}
+.main-projects-section span{
+  font-size: 30px;
+}
 @media only screen and (min-width: 300px) and (max-width: 519px) {
    .mane-section{
     flex-direction: column;
