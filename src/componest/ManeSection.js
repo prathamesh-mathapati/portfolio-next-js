@@ -17,7 +17,8 @@ import { SiTypescript } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { FaBootstrap ,FaHtml5} from "react-icons/fa"
 import navgurukul from "../assets/navgurukul_logo.jpg";
-
+import { Dark } from './Dark';
+import { companyProject } from './projectDel';
 
 const ManeSection = () => {
   return (
@@ -132,6 +133,29 @@ const ManeSection = () => {
         </div>
         </div>
       </section>
+
+      <section className='main-projects-section'>
+        <div className='w-pm-80'>
+        <h3>My <strong>Projects</strong></h3>
+
+      
+       {
+        companyProject.map((item,index)=>{
+          return(  <div className='projects-left'>
+          <div><Image src={item.ImgUrl} alt={item.titel} className='project-img'/></div>
+          <div>
+            <h4>0{index+1}</h4>
+            <p>{item.titel}</p>
+            <span>{item.descripation}</span>
+          </div>
+        </div>)
+        })
+       }
+      
+        </div>
+      </section>
+
+      <Dark/>
     </>
   );
 }

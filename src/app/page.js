@@ -4,11 +4,11 @@ import NavaBar from "@/componest/NavaBar";
 
 export default function Home() {
   return (
-    <>
-    <div >
-   <NavaBar/>
-   <ManeSection/>
-   </div>
-   </>
+
+    <main className="main-page">
+        <NavaBar/>
+        <ManeSection/>
+   </main>
+  
   );
 }
