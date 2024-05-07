@@ -19,6 +19,7 @@ import { FaBootstrap ,FaHtml5} from "react-icons/fa"
 import navgurukul from "../assets/navgurukul_logo.jpg";
 import { Dark } from './Dark';
 import { companyProject } from './projectDel';
+import { MdOpenInNew } from "react-icons/md";
 
 const ManeSection = () => {
   return (
@@ -141,13 +142,16 @@ const ManeSection = () => {
       
        {
         companyProject.map((item,index)=>{
-          return(  <div className='projects-left'>
-          <div><Image src={item.ImgUrl} alt={item.titel} className='project-img'/></div>
-          <div>
-            <h4>0{index+1}</h4>
-            <p>{item.titel}</p>
-            <span>{item.descripation}</span>
-          </div>
+          return( 
+          <div className='projects-left'>
+          <div className='w-100'><Image src={item.ImgUrl} alt={item.titel} className='project-img'/></div>
+            <div className='w-100'>
+              <h4>0{index+1}</h4>
+              <p>{item.titel}</p>
+              <span>{item.descripation}</span>
+               <Link href={item.projectDetails.projectLogingPageUrl} target="_blank"><MdOpenInNew className='md-opne-new'/></Link>
+              
+            </div>
         </div>)
         })
        }
@@ -155,8 +159,12 @@ const ManeSection = () => {
         </div>
       </section>
 
+      <section className='contact-us-section'>
+        <div className='w-pm-80'></div>
+      </section>
+
       <Dark/>
-    </>
+``    </>
   );
 }
 

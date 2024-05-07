@@ -94,6 +94,7 @@
   
 .main-express-section{
   margin-top: 50px;
+  padding-bottom: 50px;
   font-size: 60px;
   background-color: black;
   color: white;
@@ -140,8 +141,9 @@
 }
 .main-projects-section .projects-left{
   display: flex;
-  gap: 20px;
+  gap: 40px;
   text-align: left;
+  padding-top: 30px;
   
 }
 .main-projects-section .projects-left:nth-child(odd){
@@ -151,17 +153,38 @@ flex-direction: row-reverse;
 .main-projects-section .project-img{
   width: 600px;
   height: 300px;
+  border-radius: 20px;
+  
 }
 .main-projects-section   h4{
   font-size: 60px;
+  line-height: 60px;
   font-weight: 700;
+  
 }
 .main-projects-section   p{
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
 }
 .main-projects-section span{
+  display: block;
+  font-size: 14px;
+  line-height:20px;
+  color: gray;
+
+}
+.w-100{
+  width: 100%;
+  margin: auto;
+}
+.projects-left .md-opne-new{
+  padding-top: 10px;
   font-size: 30px;
+}
+
+.contact-us-section{
+background-color: black;
+color: white;
 }
 @media only screen and (min-width: 300px) and (max-width: 519px) {
    .mane-section{
