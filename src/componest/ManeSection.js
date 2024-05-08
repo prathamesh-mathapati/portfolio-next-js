@@ -160,7 +160,19 @@ const ManeSection = () => {
       </section>
 
       <section className='contact-us-section'>
-        <div className='w-pm-80'></div>
+        <div className='w-pm-80'>
+          <h4>Let’s discuss about an project!</h4>
+          <div className='contact-us-form-main'>
+            <div className='from-contect-us'>
+              <input placeholder='Your name ' type='text'/>
+              <input placeholder='Your Email' type='email'/>
+              <input placeholder='Your Number ' type='number'/>
+              <input placeholder='Your Website ' type='Website'/>
+              <button className='sub-btn'>Submit</button>
+            </div>
+            <div className='map-contect-us'></div>
+          </div>
+        </div>
       </section>
 
       <Dark/>
