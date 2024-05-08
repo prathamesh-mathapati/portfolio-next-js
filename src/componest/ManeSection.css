@@ -186,6 +186,45 @@ flex-direction: row-reverse;
 background-color: black;
 color: white;
 }
+
+.contact-us-section h4{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 50px;
+  padding: 50px 0px;
+}
+.contact-us-section .contact-us-form-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-us-section .from-contect-us{
+  background-color: #FFF;
+  height: 50vh;
+  border-radius: 20px;
+  margin: auto;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.contact-us-section .from-contect-us input {
+  height: 30px;
+  width: 50%;
+ 
+}
+.contact-us-section .sub-btn{
+  background-color: black;
+  color: #FFF;
+  padding: 10px;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 519px) {
    .mane-section{
     flex-direction: column;
