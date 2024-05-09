@@ -99,6 +99,7 @@
   background-color: black;
   color: white;
   text-align: center;
+  padding: 50px 0px;
 }
 .experience-details-heading{
   font-size: 18px;
@@ -185,6 +186,7 @@ flex-direction: row-reverse;
 .contact-us-section{
 background-color: black;
 color: white;
+padding-bottom: 50px;
 }
 
 .contact-us-section h4{
@@ -195,12 +197,14 @@ color: white;
   padding: 50px 0px;
 }
 .contact-us-section .contact-us-form-main{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact-us-section .from-contect-us{
+  width: 36%;
   background-color: #FFF;
-  height: 50vh;
+  height: 484px;
   border-radius: 20px;
   margin: auto;
   margin: 10px;
@@ -217,12 +221,34 @@ color: white;
 .contact-us-section .from-contect-us input {
   height: 30px;
   width: 50%;
+  border-bottom: 2px solid gray;
  
 }
 .contact-us-section .sub-btn{
   background-color: black;
   color: #FFF;
   padding: 10px;
+  
+}
+.contact-us-section .from-contect-us p{
+  color: black;
+  font-weight: 700;
+  font-size: 30px;
+  border-bottom: 2px solid;
+
+}
+.contact-us-section .map-contect-us{
+  height: 484px;
+  background: #FFF;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+
+
+}
+.contact-us-section .map-contect-us img{
+  border-radius: 20px;
+  width: 468px;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 519px) {
@@ -230,7 +256,7 @@ color: white;
     flex-direction: column;
    }
    .mane-section h1{
-    font-size: 30px;
+    font-size: 35px;
     padding: 10px;
   }
 
@@ -243,15 +269,68 @@ color: white;
   .botton-icons {
     justify-content: center;
   }
+  .main-skills-section .main-skills-icons{
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-skills-section h3{
+    font-size: 40px;
+  }
+  .main-express-section{
+    margin-top: 85px;
+  }
+  .main-express-section h3{
+      font-size: 40px;
+  }
+  .experience-sub-heading{
+    flex-direction: column;
+  }
+  .experience-details-heading{
+    flex-direction: column;
+  }
+  .experience-details-heading p{
+    text-align: left;
+  }
+  .main-projects-section h3{
+    font-size: 40px;
+  }
+  .main-projects-section .projects-left{
+    flex-direction: column-reverse;
+  }
+  .main-projects-section .project-img {
+    width: 600px;
+      height: auto;
+    border-radius: 20px;
+  }
+  .main-projects-section .projects-left:nth-child(odd){
+    flex-direction: column-reverse;
+  }
+  .main-projects-section h4{
+    font-size: 50px;
+  }
+  .main-projects-section p{
+    font-size: 34px;
+  }
+  .contact-us-section h4{
+    font-size: 30px;
+  }
+  .contact-us-section .from-contect-us{
+    width: 100%;
+    margin: 0px;
+  }
+  .contact-us-section .map-contect-us{
+    display: none;
+  }
 }
 
   
   @media only screen and (min-width: 520px) and (max-width: 768px) {
     .mane-section{
         flex-direction: column;
+        align-items: center;
        }
        .mane-section h1{
-        font-size: 30px;
+        font-size: 60px;
+        padding: 0px;
       }
       .mane-section .mane-section-frist{
         align-items: center;
@@ -262,8 +341,80 @@ color: white;
       .botton-icons {
         justify-content: center;
       }
+      .botton-icons {
+        justify-content: center;
+      }
+      .main-skills-section .main-skills-icons{
+        grid-template-columns: 1fr 1fr;
+      }
+      .main-skills-section h3{
+        font-size: 40px;
+      }
+      .main-express-section{
+        margin-top: 85px;
+      }
+      .main-express-section h3{
+          font-size: 40px;
+      }
+      .experience-sub-heading{
+        flex-direction: column;
+      }
+      .experience-details-heading{
+        flex-direction: column;
+      }
+      .experience-details-heading p{
+        text-align: left;
+      }
+      .main-projects-section h3{
+        font-size: 40px;
+      }
+      .main-projects-section .projects-left{
+        flex-direction: column-reverse;
+      }
+      .main-projects-section .project-img {
+        width: 600px;
+          height: auto;
+        border-radius: 20px;
+      }
+      .main-projects-section .projects-left:nth-child(odd){
+        flex-direction: column-reverse;
+      }
+      .main-projects-section h4{
+        font-size: 50px;
+      }
+      .main-projects-section p{
+        font-size: 34px;
+      }
+      .contact-us-section h4{
+        font-size: 30px;
+      }
+      .contact-us-section .from-contect-us{
+        width: 100%;
+        margin: 0px;
+      }
+      .contact-us-section .map-contect-us{
+        display: none;
+      }
   }
   
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    
+    .mane-section h1{
+      font-size: 50px;
+      padding: 0px;
+    }
+    .main-skills-section h3{
+      font-size: 50px;
+    }
+    .main-skills-section .main-skills-icons{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .main-projects-section{
+      font-size: 50px;
+    }
+    .main-projects-section h4{
+      font-size: 50px;
+    }
+    .contact-us-section .from-contect-us{
+      width: 100%;
+    }
   }

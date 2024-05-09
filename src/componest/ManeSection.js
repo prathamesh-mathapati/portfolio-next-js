@@ -20,6 +20,7 @@ import navgurukul from "../assets/navgurukul_logo.jpg";
 import { Dark } from './Dark';
 import { companyProject } from './projectDel';
 import { MdOpenInNew } from "react-icons/md";
+import contactUs from '../assets/contact-us.png'
 
 const ManeSection = () => {
   return (
@@ -164,19 +165,21 @@ const ManeSection = () => {
           <h4>Let’s discuss about an project!</h4>
           <div className='contact-us-form-main'>
             <div className='from-contect-us'>
+              <p>Connect use</p>
               <input placeholder='Your name ' type='text'/>
               <input placeholder='Your Email' type='email'/>
               <input placeholder='Your Number ' type='number'/>
               <input placeholder='Your Website ' type='Website'/>
               <button className='sub-btn'>Submit</button>
             </div>
-            <div className='map-contect-us'></div>
+            <div className='map-contect-us'>
+              <Image src={contactUs} alt="contact us" height={484} />
+            </div>
           </div>
         </div>
       </section>
 
-      <Dark/>
-``    </>
+      <Dark/>    </>
   );
 }
 
