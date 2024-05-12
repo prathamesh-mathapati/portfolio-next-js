@@ -1,6 +1,10 @@
 .nav{
   position: sticky;
-  top: 1px;
+  top: -1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+
 }
 
 .nav-bar-main{
@@ -40,12 +44,12 @@
 
 
 
-.nav-sub-text p {
+.nav-sub-text a {
     display: inline-block;
     cursor: pointer;
   }
   
-  .nav-sub-text p::after {
+  .nav-sub-text a::after {
     content: '';
     display: block;
     width: 0;
@@ -55,7 +59,7 @@
 
   }
   
-  .nav-sub-text p:hover::after {
+  .nav-sub-text a:hover::after {
     width: 100%;
   }
   .nav-link::after{

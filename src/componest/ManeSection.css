@@ -218,16 +218,20 @@ padding-bottom: 50px;
   justify-content: center;
   
 }
-.contact-us-section .from-contect-us input {
+.contact-us-section .from-contect-us input,textarea{
   height: 30px;
   width: 50%;
   border-bottom: 2px solid gray;
+  color: black;
  
 }
 .contact-us-section .sub-btn{
   background-color: black;
   color: #FFF;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   
 }
 .contact-us-section .from-contect-us p{
