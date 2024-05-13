@@ -8,7 +8,7 @@ export default function Home() {
     <main className="main-page">
         <NavaBar/>
         <ManeSection/>
-   </main>
+    </main>
   
   );
 }

@@ -22,7 +22,7 @@ import { MdOpenInNew } from "react-icons/md";
 import contactUs from '../assets/contact-us.png'
 import emailjs from '@emailjs/browser';
 import { ColorRing } from 'react-loader-spinner';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ManeSection = () => {
@@ -212,7 +212,7 @@ const ManeSection = () => {
             </div>
           </div>
         </section>
-
+        <ToastContainer/>``
         <Dark/>    
       </>
   );
