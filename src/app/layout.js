@@ -4,8 +4,8 @@ import "./globals.css";
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Prathamesh mathapati",
-  description: "best react js developer in pune",
+  title: "Prathamesh Mathapati",
+  description: "best react js developer in pune prathamesh mathapati",
 };
 
 export default function RootLayout({ children }) {
