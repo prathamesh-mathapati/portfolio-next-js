@@ -8,7 +8,7 @@ export default function sitemap() {
     url: hostUrl+item,
     lastModified: new Date(),
     changeFrequency: 'yearly',
-    priority: 1,
+    priority: 2,
   }
  )
 
