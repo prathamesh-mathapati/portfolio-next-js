@@ -1,5 +1,7 @@
-{  "homepage": "https://main--inspiring-cajeta-a31e4c.netlify.app/",
-  "name": "prathamesh-portfoliof",
+
+{  "homepage": "http://prathamesh-mathapati.github.io/portfolio-next-js",
+  "name": "prathamesh-portfolio",
+
   "version": "0.1.0",
   "private": true,
   "scripts": {
