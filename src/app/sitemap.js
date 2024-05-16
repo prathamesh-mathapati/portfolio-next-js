@@ -2,13 +2,13 @@ import  { MetadataRoute } from 'next'
 
 export default function sitemap() {
 
-  let hostUrl='https://main--inspiring-cajeta-a31e4c.netlify.app/'
+  let hostUrl='http://localhost:3000/'
  const route= [''].map((item)=>(
   {
-    url: hostUrl+item,
+    url: hostUrl,
     lastModified: new Date(),
     changeFrequency: 'yearly',
-    priority: 2,
+    priority: 1,
   }
  )
 
