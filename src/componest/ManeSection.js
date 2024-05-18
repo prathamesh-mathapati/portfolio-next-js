@@ -31,7 +31,9 @@ const ManeSection = () => {
   const [number,setNumber]=useState('')
   const [message,setMessage]=useState('')
   const [btnDesable,setBtnDesable]=useState(false)
-  const notifyError = (error) => toast.success('🦄 Wow so easy!', {
+  const [darkMode, setDark] = useState(false);
+
+  const notifyError = (error) => toast.error(`${error}`, {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -40,10 +42,25 @@ const ManeSection = () => {
     draggable: true,
     progress: undefined,
     theme: "colored",
-    transition: 'Bounce',
     });
+
+    const notifyDone = () => toast.success(`Thank you for contact me !`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
   const sendEmail = () => {
+    let emaiValidation= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
     if(!name) return notifyError("Fill the name ")
+    if(!email) return notifyError("Fill the Email ")
+    if(!message) return notifyError("Fill the  Message")
+    if(!email.match(emaiValidation)) return notifyError("Fill the  vaild Email")
     setBtnDesable(true)
     const serviceid="service_begrnd9"
     const templateid="template_1pgmqaz"
@@ -59,6 +76,7 @@ const ManeSection = () => {
       )
       .then(
         () => {
+          notifyDone()
           setBtnDesable(false)
           setName('') 
           setEmail('')
@@ -76,7 +94,7 @@ const ManeSection = () => {
   return (
 
     <>
-      <section className='mane-section w-pm-80' id='home'>
+      <section className={`mane-section   ${darkMode ?"bg-black ":"w-pm-80"}`} id='home'>
         <div className='mane-section-frist '>
           <h1>Hello I'm <span>Prathamesh</span>  <br /> <span>Web</span> Developer <br /> Best for <span>India</span></h1>
           <div className='botton-icons d-flex'>
@@ -92,7 +110,7 @@ const ManeSection = () => {
 
       </section>
 
-        <section className='main-skills-section w-pm-80' id='Skills'>
+        <section className='main-skills-section w-pm-80 ' id='Skills'>
             <h3>My <strong> Skills</strong></h3>
             <div className='main-skills-icons'>
             <span>
@@ -212,8 +230,20 @@ const ManeSection = () => {
             </div>
           </div>
         </section>
-        <ToastContainer/>``
-        <Dark/>    
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          />
+   
+        <Dark darkMode={darkMode} setDark={setDark}/>    
       </>
   );
 }
