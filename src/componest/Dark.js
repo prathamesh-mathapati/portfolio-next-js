@@ -3,8 +3,8 @@ import "./Dark.css";
 import { MdDarkMode } from "react-icons/md";
 import { MdWbSunny } from "react-icons/md";
 
-export const Dark = () => {
-  const [darkMode, setDark] = useState(false);
+export const Dark = (props) => {
+  const {darkMode,setDark}=props
   const handelDarkmode = () => {
     setDark(!darkMode);
   };
