@@ -24,6 +24,7 @@ import emailjs from '@emailjs/browser';
 import { ColorRing } from 'react-loader-spinner';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const ManeSection = () => {
   const [name,setName]=useState('')
@@ -54,7 +55,7 @@ const ManeSection = () => {
       progress: undefined,
       theme: "colored",
       });
-  const sendEmail = () => {
+  const sendEmail = async() => {
     let emaiValidation= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
     if(!name) return notifyError("Fill the name ")
@@ -71,24 +72,45 @@ const ManeSection = () => {
       to_name:"Prathamesh mathapati",
       message:message
     }
-    emailjs
-      .send(serviceid, templateid, templateFrom, publicKey
-      )
-      .then(
-        () => {
-          notifyDone()
-          setBtnDesable(false)
-          setName('') 
-          setEmail('')
-          setNumber('')
-          setMessage('')
+    let headers={Accept: "application/json",}
+    try {
+     await axios.post('/api',templateFrom,{headers}).then((res)=>{
+            notifyDone()
+            setBtnDesable(false)
+            setName('') 
+            setEmail('')
+            setNumber('')
+            setMessage('')
+
+     }).catch((error)=>{
+      notifyError(JSON.stringify(error))
+     })
+
+      
+    } catch (error) {
+      
+    }
+    
+    // emailjs
+    //   .send(serviceid, templateid, templateFrom, publicKey
+    //   )
+    //   .then(
+    //     () => {
+    //       notifyDone()
+    //       setBtnDesable(false)
+    //       setName('') 
+    //       setEmail('')
+    //       setNumber('')
+    //       setMessage('')
         
-        },
-        (error) => {
-          setBtnDesable(false)
-          console.log('FAILED...', error);
-        },
-      );
+    //     },
+    //     (error) => {
+    //       setBtnDesable(false)
+    //       console.log('FAILED...', error);
+    //     },
+    //   );
+
+    axios
   };
   
   return (
