@@ -230,12 +230,18 @@ padding-bottom: 50px;
   
 }
 .contact-us-section .from-contect-us input,textarea{
+  outline: none;
   height: 30px;
   width: 50%;
   border-bottom: 2px solid gray;
   color: black;
+  padding-left: 10px;
  
 }
+.contact-us-section .from-contect-us input:focus,textarea:focus{
+  border-bottom: 2px solid rgb(12, 1, 1);
+}
+
 .contact-us-section .sub-btn{
   background-color: black;
   color: #FFF;
@@ -243,6 +249,7 @@ padding-bottom: 50px;
   display: flex;
   align-items: center;
   gap: 10px;
+  border-radius: 5px;
   
 }
 .contact-us-section .from-contect-us p{
@@ -264,6 +271,22 @@ padding-bottom: 50px;
 .contact-us-section .map-contect-us img{
   border-radius: 20px;
   width: 468px;
+}
+.thank-you-msg{
+  background-color: greenyellow;
+  padding: 10px 58px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 700;
+}
+.thank-you-msg svg{
+  font-size: 24px;
+  border: 2px solid;
+  border-radius: 22px;
+ 
 }
 
 @media only screen and (min-width: 300px) and (max-width: 519px) {
