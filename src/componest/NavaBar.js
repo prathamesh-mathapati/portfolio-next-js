@@ -1,6 +1,6 @@
 import { IoCloudDownloadOutline } from "react-icons/io5";
 import './style.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import Link from "next/link";
@@ -10,6 +10,12 @@ export default function NavaBar() {
   const anvSubText = ["Skills", "Experience","Project", "Contact me"]
   const [navSubtext, setnavSubtext] = useState('')
   const [showManu, setsShowManu] = useState(true)
+  useEffect(()=>{
+if(document.body.offsetWidth<=768){
+  setsShowManu(false)
+}
+  },[])
+
 
 
   return (

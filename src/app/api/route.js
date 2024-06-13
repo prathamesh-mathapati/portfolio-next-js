@@ -14,16 +14,14 @@ export const POST=async(res)=>{
           pass: 'qhcnrnmvcjxbzelm',
         },
       });
-      const emailHtml = `${<div>
-        <p>{respost.from_name}</p>
-         </div>}`;
+      const emailHtml =`<b>Hello ${respost.to_name} ,</b><p>This is a test email sent by <b>${respost.from_name}</b>. This is Email id <b>${respost.from_email}</b> and Phone no <b>${respost.number}</b>. </p> <p>This is Message ${respost.message}</p>`;
    
       const info = await transporter.sendMail({
         from:'prathamesh20@navgurukul.org' , // sender address
         to: 'prathamesh20@navgurukul.org', // list of receivers
         subject: "From Portfolio", // Subject line
         text: 'cxsdcds', // plain text body
-        html: `${<p>{respost.message}</p>}` // html body
+        html: emailHtml // html body
       });
 
       return NextResponse.json({

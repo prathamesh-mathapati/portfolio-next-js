@@ -25,6 +25,9 @@ import { ColorRing } from 'react-loader-spinner';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import ParticleEffectButton from 'react-particle-effect-button';
+import { TiTick } from "react-icons/ti";
+
 
 const ManeSection = () => {
   const [name,setName]=useState('')
@@ -33,6 +36,8 @@ const ManeSection = () => {
   const [message,setMessage]=useState('')
   const [btnDesable,setBtnDesable]=useState(false)
   const [darkMode, setDark] = useState(false);
+  const [showmeg, setShowmeg] = useState(false);
+
 
   const notifyError = (error) => toast.error(`${error}`, {
     position: "top-right",
@@ -63,13 +68,12 @@ const ManeSection = () => {
     if(!message) return notifyError("Fill the  Message")
     if(!email.match(emaiValidation)) return notifyError("Fill the  vaild Email")
     setBtnDesable(true)
-    const serviceid="service_begrnd9"
-    const templateid="template_1pgmqaz"
-    const publicKey="uRtF6o2FlQpWLx2lf"
+ 
     const templateFrom={
       from_name:name,
       from_email:email,
       to_name:"Prathamesh mathapati",
+      number,
       message:message
     }
     let headers={Accept: "application/json",}
@@ -77,6 +81,10 @@ const ManeSection = () => {
      await axios.post('/api',templateFrom,{headers}).then((res)=>{
             notifyDone()
             setBtnDesable(false)
+            setTimeout(()=>{
+              setShowmeg(false)
+            },3000)
+        
             setName('') 
             setEmail('')
             setNumber('')
@@ -84,33 +92,18 @@ const ManeSection = () => {
 
      }).catch((error)=>{
       notifyError(JSON.stringify(error))
+      setBtnDesable(false)
+      setShowmeg(false)
      })
 
       
     } catch (error) {
-      
+      setBtnDesable(false)
+      setShowmeg(false)
     }
     
-    // emailjs
-    //   .send(serviceid, templateid, templateFrom, publicKey
-    //   )
-    //   .then(
-    //     () => {
-    //       notifyDone()
-    //       setBtnDesable(false)
-    //       setName('') 
-    //       setEmail('')
-    //       setNumber('')
-    //       setMessage('')
-        
-    //     },
-    //     (error) => {
-    //       setBtnDesable(false)
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-
-    axios
+ 
+    
   };
   
   return (
@@ -234,18 +227,37 @@ const ManeSection = () => {
                 <input placeholder='Your name ' type='text' onChange={e=>(setName(e.target.value))} value={name}/>
                 <input placeholder='Your Email' type='email' onChange={e=>setEmail(e.target.value)} value={email}/>
                 <input placeholder='Your Number ' type='number' onChange={e=>setNumber(e.target.value)} value={number}/>
-                <textarea placeholder='Your messges ' onChange={e=>setMessage(e.target.value)} value={message}/>
+                <textarea placeholder='Your messges ' onChange={e=>setMessage(e.target.value)} value={message} height='64'/>
+                
+                   <ParticleEffectButton
+                  color='black'
+                  hidden={btnDesable}
+                  type="triangle"
+                  direction="right"
+                  
+                 >
+                    {showmeg&& <div className='thank-you-msg'>
+                   <TiTick />
+
+                    Thank you 
+                   </div>}
                 <button className='sub-btn' onClick={()=>sendEmail()} disabled={btnDesable}>
-                <ColorRing
-                  visible={btnDesable}
-                  height="30"
-                  width="30"
-                  ariaLabel="color-ring-loading"
-                  wrapperStyle={{}}
-                  wrapperClass="color-ring-wrapper"
-                  colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
-                  />Submit</button>
+                    <ColorRing
+                       visible={btnDesable}
+                      height="30"
+                       width="30"
+                      ariaLabel="color-ring-loading"
+                            wrapperStyle={{}}
+                            wrapperClass="color-ring-wrapper"
+                            colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+                            />Submit
+                        </button>
+                   </ParticleEffectButton>
+
+
+                
               </div>
+             
               <div className='map-contect-us'>
                 <Image src={contactUs} alt="contact us" height={484} />
               </div>
