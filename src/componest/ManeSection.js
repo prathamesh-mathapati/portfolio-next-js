@@ -111,7 +111,7 @@ const ManeSection = () => {
     <>
       <section className={`mane-section   ${darkMode ?"bg-black ":"w-pm-80"}`} id='home'>
         <div className='mane-section-frist '>
-          <h1>Hello I'm <span>Prathamesh</span>  <br /> <span>Web</span> Developer <br /> Best for <span>India</span></h1>
+          <h1>Hello I'm <span>Prathamesh</span>  <br /> <span>Web</span> Developer <br /> Best in <span>India</span></h1>
           <div className='botton-icons d-flex'>
               <Link href="https://github.com/prathamesh-mathapati" target='_blank' className='botton-icons-dark'><FaGithub /></Link>
               <Link href="mailto:prathamesh20@navgurukul.org" target='_blank'><MdEmail /></Link>
